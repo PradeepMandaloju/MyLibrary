@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <nav class="navbar navbar-dark bg-dark flex-md-column">
+                
+                <a routerLink="/admin/home" class="navbar-brand"><h3>My Library</h3></a>
+                <div class="" id="">
+                    <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
+                        <li class="nav-item"><a routerLink="/admin/home" class="nav-link hello"><img src="https://st2.depositphotos.com/2498595/7199/v/450/depositphotos_71998101-stock-illustration-book-icon.jpg" alt="book logo" height="200px" ></a></li>                        
+                        <li class="nav-item"><a routerLink="/admin/home" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a routerLink="/admin/add" class="nav-link">Add New Book</a></li>
+                        <li class="nav-item"><a routerLink="/admin/manage" class="nav-link">Manage All Books</a></li>
+                        <li class="nav-item"><a routerLink="" class="nav-link">Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="col-md-9">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

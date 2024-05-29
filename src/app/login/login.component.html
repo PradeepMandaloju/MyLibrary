@@ -1,0 +1,77 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"><img src="https://media.istockphoto.com/id/877235850/vector/book-icon.jpg?s=612x612&w=0&k=20&c=FSTH3SrcKKTSH09LLkucwABRWOKHRYPmEjxqBjEDjxc=" alt="" class="img-fluid"></div>
+        <div class="col-md-4"><br><br>
+          <h1 align="center"><u>My Library</u></h1>
+          <br>
+          <br><br>
+          
+          <h2 align="center">Login</h2>
+          <br><br>
+            <form action="" (ngSubmit)="Login()" ngNativeValidate >
+                <div class="form-group">
+                    <label for="" class="form-label">Username</label>
+                    <input type="text" class="form-control" name="Username" [(ngModel)]="username" required="true">
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" [(ngModel)]="password" required="true">
+                </div>
+                <br>
+                <div class="form-group">
+                    <button class="btn" style="background-color: #165C73;color: white; width: 485px;" type="submit">Login</button>
+                    
+                   
+                </div>
+            </form>
+            <br>
+            <P>Don't have an account? <a href="" data-bs-toggle="modal" data-bs-target="#mymodal">Register Here</a> </P>
+        </div>
+        <div class="col-md-4"><img src="https://media.istockphoto.com/id/877235850/vector/book-icon.jpg?s=612x612&w=0&k=20&c=FSTH3SrcKKTSH09LLkucwABRWOKHRYPmEjxqBjEDjxc=" alt="" class="img-fluid"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="modal fade" id="mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" >Register</h5>
+                <a data-bs-dismiss="modal" class="btn-close"></a>
+              </div>
+            <div class="modal-body">
+                <form  name="form" (ngSubmit)="register()">
+                    <div class="form-group">
+                      <label for="username1">Username</label>
+                      <input type="text" class="form-control" name="username1" [(ngModel)]="username1"  required>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="text" class="form-control" name="email" [(ngModel)]="email"  required >
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Phone Number</label>
+                        <input type="number" class="form-control" name="phone" [(ngModel)]="phone"  required >
+                      </div>
+                    <div class="form-group">
+                        <label for="password1">password</label>
+                        <input type="password" class="form-control" name="password1" [(ngModel)]="password1"  required >
+                      </div>
+                    <br>
+                    <div class="form-group">
+                      <button class="btn" style="background-color: #165C73;color: white; width: 200px;"  type="submit" data-bs-dismiss="modal">Sign Up</button>
+                      <p style="display: inline;">&nbsp;&nbsp;&nbsp;</p>
+                      <button type="button" class="btn " data-bs-dismiss="modal">&nbsp;Cancel&nbsp;</button>
+                    </div>
+                  </form>
+            </div>
+            
+        </div>
+    </div>
+</div>

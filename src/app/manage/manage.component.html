@@ -1,0 +1,129 @@
+
+<div class="container" >
+    <div class="row">
+        <ng-container  *ngFor="let b of books" >
+            <ng-container *ngIf="!b.show">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <img [src]="b.image" class="card-img-top" height="350px">
+                        
+                    </div>
+    
+                    <div class="card-body">
+                        <h4 class="card-title">{{b.bookName}}</h4>
+                        
+                    </div>
+                    <div class="card-footer">
+                        <h6>Author : {{b.author}}</h6>
+                        <h6>Genre : {{b.genre}}</h6>
+                        <h6>Published Year : {{b.year}}</h6>
+                        <br>
+                        
+                        <button class="btn" style="background-color: rgba(0, 0, 0, 0.249);" (click)="edit(b)">Edit</button>
+                        <p style="display: inline;">&nbsp;&nbsp;&nbsp;</p>
+                        <button class="btn btn-danger" (click)="delete(b)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </div>
+                    </div>
+                    </div>
+                </ng-container>
+
+                <ng-container *ngIf="b.show">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <img [src]="b.image" class="card-img-top" height="350px">
+                                
+                            </div>
+            
+                            <div class="card-body">
+                                <input type="text" class="form-control" name="bookName" [(ngModel)]="b.bookName"  required> 
+                            </div>
+                            <div class="card-footer">
+                                <input type="text" class="form-control" name="author" [(ngModel)]="b.author"  required >
+
+                                <input type="text" class="form-control" name="genre" [(ngModel)]="b.genre"  required >
+
+                                <input type="text" class="form-control" name="year" [(ngModel)]="b.year"  required >
+
+                                <br>
+                          
+                                <button class="btn btn-success" (click)="update(b)">Save</button>
+                                <p style="display: inline;">&nbsp;&nbsp;&nbsp;</p>
+                                <button class="btn btn-danger" (click)="delete(b)">Delete</button>
+                            </div>
+                            </div>
+                            </div>
+                </ng-container>
+                
+        </ng-container>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="modal fade" id="mymodal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" >Edit</h5>
+                                    <a data-bs-dismiss="modal" class="btn-close"></a>
+                                  </div>
+                                <div class="modal-body">
+                                    <form  name="form" >
+                                        <div class="form-group">
+                                          <label for="bookName">Book Title</label>
+                                          <input type="text" class="form-control" name="bookName" [(ngModel)]="b.bookName"  required>
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="author">Author</label>
+                                          <input type="text" class="form-control" name="author" [(ngModel)]="b.author"  required >
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="genre">Genre</label>
+                                            <input type="text" class="form-control" name="genre" [(ngModel)]="b.genre"  required >
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="year">Year</label>
+                                            <input type="text" class="form-control" name="year" [(ngModel)]="b.year"  required >
+                                        </div>
+                                        <br>
+                                        <div class="form-group">
+                                          <button class="btn btn-success" (click)="update(b)" data-bs-dismiss="modal">Save</button>
+                                          <p style="display: inline;">&nbsp;&nbsp;&nbsp;</p>
+                                          <button type="button" class="btn " data-bs-dismiss="modal">&nbsp;Cancel&nbsp;</button>
+                                        </div>
+                                      </form>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div> -->
+
+
+<!--       
+<ng-template #content let-modal>
+<div class="modal-header" style="background-color:#233242;height:77px">
+<h4 class="modal-title" id="modal-basic-title" style="color:#ffff">Edit question here</h4>
+<a class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+<span aria-hidden="true" style="font-size:15px;outline:none;color:#ffff;background-color:#233242">&times;</span>
+</a>
+</div>
+<div class="modal-body" style="height:120px">
+<form>
+<div class="form-group" >
+<input type="text"  style="width: 100%" name="new" [(ngModel)]="query.question" placeholder="Enter question here">
+<br><button class="btn btn-primary" style="margin-left:680px;margin-top: 15px" (click)="Update()" >Submit</button>
+</div> -->
